@@ -18,7 +18,7 @@ development:
   template: template0
   database: c2-rails-helloworld_development
   pool: 5
-  username: rails
+  username: ubuntu
   password: changeme.
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -45,7 +45,7 @@ test:
   template: template0
   database: c2-rails-helloworld_test
   pool: 5
-  username: rails
+  username: ubuntu
   password: changeme.
 
 production:
@@ -54,5 +54,5 @@ production:
   template: template0
   database: c2-rails-helloworld_production
   pool: 5
-  username: rails
+  username: ubuntu
   password: changeme.
