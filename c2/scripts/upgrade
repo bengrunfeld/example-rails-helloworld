@@ -1,0 +1,20 @@
+#!/bin/sh -x
+
+# C2 upgrade script which runs as "ubuntu" each time an upgrade is triggered
+#
+# NOTE: git repository update is performed immediately prior
+
+# upgrade packages
+sudo apt-get update && sudo apt-get dist-upgrade -y --force-yes
+
+# upgrade application
+cd /home/ubuntu/repo
+chown -R ubuntu.ubuntu /home/ubuntu/.gem
+bundle install
+rake db:migrate
+
+# start the daemon
+sudo restart rails
+
+# stamp date
+sudo date > /var/cache/c2/date-last-upgrade
