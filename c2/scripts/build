@@ -14,7 +14,7 @@ apt-get install -yq --force-yes curl openssl postgresql ruby1.9.1 ruby1.9.1-dev 
 apt-get install -y --force-yes %(additional_packages)s
 
 # create/install application database
-psql postgres -c "CREATE ROLE ubuntu WITH CREATEDB LOGIN PASSWORD '%(database_password)s'"
+sudo -u postgres psql postgres -c "CREATE ROLE ubuntu WITH CREATEDB LOGIN PASSWORD '%(database_password)s'"
 
 # force utf-8
 sudo dpkg-reconfigure locales
