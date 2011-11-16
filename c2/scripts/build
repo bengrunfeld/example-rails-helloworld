@@ -32,7 +32,6 @@ cd /home/ubuntu/repo
 sed -i -e s/password:.*/password:\ %(database_password)s./g config/database.yml
 
 bundle install
-rake db:create
 
 # create start script for upstart
 mkdir -p /home/ubuntu/bin
@@ -61,3 +60,4 @@ EOF
 
 # start the daemon
 start rails
+rake db:create
