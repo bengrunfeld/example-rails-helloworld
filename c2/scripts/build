@@ -32,7 +32,7 @@ cd /home/ubuntu/repo
 sed -i -e s/password:.*/password:\ %(database_password)s./g config/database.yml
 
 bundle install
-sudu -u ubuntu rake db:create
+sudo -u ubuntu rake db:create
 
 # create start script for upstart
 mkdir -p /home/ubuntu/bin
