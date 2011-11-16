@@ -29,7 +29,7 @@ sudo chown -R ubuntu.ubuntu /home/ubuntu/.gem
 cd /home/ubuntu/repo
 
 # set the DB password for user ubuntu
-sed -i -e s/password:.*/password:\ %(database_password)s./g database.yml
+sed -i -e s/password:.*/password:\ %(database_password)s./g config/database.yml
 
 bundle install
 rake db:create
