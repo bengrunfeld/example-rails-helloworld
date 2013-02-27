@@ -41,3 +41,4 @@ gem 'jquery-rails'
 # OpDemand added
 gem 'therubyracer'
 gem 'pg'
+gem 'unicorn'
